@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const BASE_URL = 'https://workout-buddy-uxio.onrender.com/';
+const BASE_URL = 'https://workout-buddy-aqhj.onrender.com/';
 
 
 const publicRequest = axios.create({
