@@ -1,0 +1,379 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;800&display=swap');
+
+/* Colors */
+:root {
+    --primary: #1aac83;
+    --error: #e7195a;
+    --secondary: #70c1b3;
+    --background: #f8f8f8;
+    --text-primary: #333;
+    --text-secondary: #666;
+    --accent: #ffcc5c;
+}
+
+/* Global Styles */
+body {
+    background: #f1f1f1;
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+a {
+    color: var(--secondary);
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+h3 {
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: var(--primary);
+}
+
+
+a:hover {
+    color: var(--accent);
+}
+
+/* Header Styles */
+header {
+    background: linear-gradient(to right, #1dbb8e, #089673);
+    color: #fff;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    z-index: 1;
+}
+
+header .container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+header a:hover {
+    color: rgba(255, 255, 255, 0.8);
+}
+
+/* Page Content Styles */
+.pages {
+    position: relative;
+    top: 7rem;
+    max-width: 1200px;
+    padding: 40px;
+    margin: 0 auto;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* homepage */
+.home {
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    gap: 100px;
+}
+
+.workout-details {
+    background-color: #fff;
+    border-radius: 4px;
+    margin: 20px auto;
+    padding: 20px;
+    position: relative;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+.workout-details h4 {
+    margin: 0 0 10px 0;
+    font-size: 1.5em;
+    font-weight: 600;
+    color: var(--text-primary);
+}
+
+.workout-details p {
+    margin: 0;
+    font: 0.9em;
+    color: #555;
+}
+
+.workout-details span {
+
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    cursor: pointer;
+    background-color: #f1f1f1;
+    padding: 6px;
+    border-radius: 50%;
+    color: #333;
+
+}
+
+.workout-details span:hover {
+    background-color: #129a77;
+}
+
+.workout-details:before {
+    content: "";
+    position: absolute;
+    top: -10px;
+    left: -10px;
+    width: calc(100% + 10px);
+    height: calc(100% + 10px);
+    border: 2px solid var(--primary);
+    border-radius: 8px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.workout-details:hover:before {
+    opacity: 1;
+}
+
+/* New Workout Form */
+label,
+input {
+    display: block;
+}
+
+/* input tags  */
+input {
+    padding: 10px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    width: 100%;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.8rem;
+    font-weight: 500;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+input:focus {
+    outline: none;
+    border: 2px solid var(--primary);
+    box-shadow: 0 0 4px rgba(26, 172, 131, 0.3);
+}
+
+input::placeholder {
+    color: #999;
+    font-weight: 400;
+}
+
+input:hover {
+    border-color: #aaa;
+}
+
+input:disabled {
+    background-color: #f1f1f1;
+    cursor: not-allowed;
+}
+
+input.error {
+    border: 1.5px solid var(--error);
+}
+
+input.error:focus {
+    box-shadow: 0 0 4px rgba(231, 25, 90, 0.3);
+}
+
+
+form button {
+    background: var(--primary);
+    border: 0;
+    color: #fff;
+    padding: 10px;
+    font-family: "Poppins";
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-size: .95em;
+    font-weight: 500;
+}
+
+form button:hover {
+    background-color: #129a77;
+}
+
+div.error {
+    padding: 10px;
+    background: #ffefef;
+    border: 1px solid var(--error);
+    color: var(--error);
+    border-radius: 4px;
+    margin: 20px 0;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+input.error {
+    border: 1.5px solid var(--error);
+}
+
+/* navbar  */
+nav {
+    display: flex;
+    align-items: center;
+    background: linear-gradient(to right, #1aac83, #129a77);
+    padding: 10px 20px;
+    border-radius: 8px;
+  }
+  
+  nav a {
+    margin-left: 10px;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s ease;
+  }
+  
+  nav a:hover {
+    color: rgba(255, 255, 255, 0.8);
+  }
+  
+  nav button {
+    background: #fff;
+    color: var(--primary);
+    border: 2px solid var(--primary);
+    padding: 8px 16px;
+    border-radius: 4px;
+    font-family: 'Poppins', sans-serif;
+    cursor: pointer;
+    font-size: 1em;
+    margin-left: 10px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+  
+  nav button:hover {
+    background-color: var(--primary);
+    color: #fff;
+  }
+  
+  .email {
+    font-size: 1em;
+    margin-inline-end: 1rem;
+    color: #555;
+    font-weight: 500;
+    text-decoration: underline;
+  }
+  
+  .icon {
+    border-radius: 50%;
+    margin-right: 3px;
+    padding: 10px;
+    font-size: 1.6em;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    position: relative;
+    top: 7px;
+  }
+  
+  .icon:hover {
+    background-color: #1dbb8e;
+    color: #fff;
+  }
+  
+
+/* auth forms  */
+form.signup,
+form.login {
+    max-width: 400px;
+    margin: 40px auto;
+    padding: 20px;
+    background: #fff;
+    border-radius: 4px;
+}
+
+.signup_redirect,
+.login_redirect {
+    margin-top: 10px;
+    text-decoration: none;
+    color: var(--error);
+    position: relative;
+    left: 30%;
+    display: inline-block;
+    transition: transform 0.3s ease;
+}
+
+.signup_redirect::before,
+.login_redirect::before {
+    content: "";
+    position: absolute;
+    bottom: -3px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: var(--error);
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+}
+
+.signup_redirect:hover,
+.login_redirect:hover {
+    transform: translateY(-3px);
+}
+
+.signup_redirect:hover::before,
+.login_redirect:hover::before {
+    transform: scaleX(1);
+}
+
+footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: #f1f1f1;
+    padding-bottom: 15px;
+    text-align: center;
+    border-radius: 10px 10px 0px 0px;
+}
+
+/* media queries  */
+
+@media (max-width: 768px) {
+    .home {
+        display: flex;
+        flex-direction: column-reverse;
+        gap: 20px;
+        margin-bottom: 10px;
+    }
+
+    .workout-details {
+        margin: 15px auto;
+    }
+
+    header .container {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 10px;
+    }
+
+    header a {
+        margin-top: 10px;
+    }
+
+    .pages {
+        top: 11rem;
+        padding: 20px;
+    }
+
+    .login_redirect {
+        left: 2rem;
+    }
+
+    .signup_redirect {
+        left: 3rem;
+    }
+}
